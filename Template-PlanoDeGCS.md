@@ -52,7 +52,7 @@ O Plano de Gerenciamento de Configurações irá definir as responsabilidades do
 2.1 Organização, Responsabilidades e Interfaces
 ------------------------------------------------
 Gerente de Configuração: Iuri Farias - Estabelecer Políticas de GC; Escrever Plano de GC; Configurar ambiente de GC;
-Gerente de Baselines: Neto Oliveira - Criar baselines.
+Gerente de Baselines: José Oliveira - Criar baselines.
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
@@ -107,7 +107,7 @@ O backup do repositório ser mantido e atualizado na view de desenvolvimeto. Os 
 
 O comitê de Controle de Mudanças (CCM) será formado pelo Gerente de Configuração e  Gerente de Projetos.
 
-Gerente de Configuração  –  Jose Oliveira
+Gerente de Configuração  –  José Oliveira
 Gerente de Projeto – Iuri Farias
 
 
