@@ -72,33 +72,43 @@ Nomenclatura de criação de branches: Branch<NomeResponsável> ex: BranchJose, 
 Nomenclatura de versionamento: ver_numVersão_DiaMesAno ex: ver_1.0_09122014
 
 ### 3.1.2 Itens de Configuração
-_[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou subsistema, responsável ou momento em que deverão ser incluídos em baselines._
-* _“Inclusão em Baseline” em branco significa que o grupo de artefatos não participará de baseline. Pode ser expresso como uma data ou identificador de uma baseline, fase ou ponto de controle_
-* _“Responsável”: indicar nominalmente, sempre que possível]_
+
 
 | Item (ou Tipo de Item)                 | Responsável na equipe	     | Inclusão em Baseline |
-|----------------------------------------|-----------------------------|----------------------|
-|_&lt;grupo de itens de configuração&gt;_|_&lt;nome do responsável&gt;_|_&lt;momento a partir do qual o conjunto de artefatos será incluído em baseline&gt;_|
+|----------------------------------------|----------------------------|----------------------|
+|Criação dos Casos de Uso                |José Oliveira               |Quando uma versão de Caso de Uso for criada ou alterada|
+| Criação dos Casos de Teste             |Iuri Farias                 |Quando uma versão de caso de teste for criada ou alterada|
+|Cronograma do Projeto                   |Iuri Farias                 |Quando houver alteração na data de entrega do projeto| 
 
 
 ### 3.1.3 Baselines do Projeto
 
-_[As baselines funcionam como um padrão oficial no qual os trabalhos subseqüentes são baseados. Somente mudanças autorizadas podem ser efetuadas nas baselines._
-_Descreva em que pontos do ciclo de vida do projeto ou produto as baselines devem ser estabelecidas. As baselines mais comuns devem ser definidas ao final de cada uma das fases de Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior._
-_Descreva quem autoriza uma baseline e o que ela contém.]_
+Ciclo de vida do projeto deverá ser deifnido de acordo com o cronograma.
+As baselines devem ser estabelecidas a cada ciclo de iteração em cada fase: Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior definidas por José Oliveira.
 
 ### 3.1.4 Estrutura do Repositório de Versões
-_[Descreva a organização de diretórios do seu repositório e que itens/arquivos devem ser armazenados em cada diretório.]_
+O projeto será dividido nas seguintes fases:
+1- Criação
+2- Levantamento de Requisitos
+3- Desenvolvimento
+4- Testes
+5- Homologação
+6- Implatação
+7- Encerramento
 
 3.2 Controle de Configuração e Mudança
 --------------------------------------
 
 ### 3.2.1 Processamento e Aprovação de Solicitações de Mudança
-_[Descreva o processo pelo qual os problemas e as mudanças são submetidos, revisados e dispostos. Inclua como funciona a transição de estados de uma solicitação de mudança]_
+
+O backup do repositório ser mantido e atualizado na view de desenvolvimeto. Os artefatos alterados durante a semana de trabalho serão salvos na view de integração de acordo com o fluxo de trabalho e ordens de serviços. Apenas o Gerente de configuração poderá subir os artefatos para a view de integração (produção).
 
 ### 3.2.2 Comitê de Controle de Mudança (CCB)
-_[Descreva a participação e os procedimentos para processar solicitações e aprovações de mudança a serem seguidos pelo CCB. Informe quem são os membros do CCB e suas responsabilidades.]_
 
+O comitê de Controle de Mudanças (CCM) será formado pelo Gerente de Configuração e  Gerente de Projetos.
+
+Gerente de Configuração  –  Jose Oliveira
+Gerente de Projeto – Iuri Farias
 
 
 4. Padrões e Procedimentos
