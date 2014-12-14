@@ -113,16 +113,27 @@ Gerente de Projeto – Iuri Farias
 
 4. Padrões e Procedimentos
 ==========================
-_[Descreva os padrões e procedimentos que devem ser seguidos no projeto. Crie subseções se achar necessário, para organizá-los melhor.]_
+Padrões de nomenclatura a serem seguidos são:
+- Padrão de versão do produto:
+X.x.x	Novas funcionalidades significativas
+x.X.x	Melhorias, refatoramentos e evoluções
+x.x.X	Correções de bugs
+
+- Padrão de commit de alterações no repositório:
+Nº da Solicitação
+Descrição resumida do que foi alterado/implementado
 
 
 
 5. Treinamento e Recursos
 =========================
-_[Descreva as ferramentas de software, o pessoal e o treinamento necessários para implementar as atividades de CM especificadas.]_
+- Controle de versão: Git. Todos os usuários deverão ter o domínio desta ferramenta.
+- Ferramenta de testes: Selenium. Iuri Farias será o responsável pelos testes e deverá possuir conhecimento da ferramenta.
+- Ferramenta Bug tracking: Bugzilla. Todos os usuários deverão ter o domínio desta ferramenta.
 
 
 
 6. Auditorias de Configuração
 =============================
-_[Descreva o cronograma das auditorias de configuração e o que será verificado. Informe também como serão reportados os problemas encontrados e onde sera feito o acompanhamento dos itens corretivos.]_
+- As auditorias serão feitas após as baselines. 
+- Caso haja não conformidade, será criada uma "issue" na ferramenta Bugzilla.
