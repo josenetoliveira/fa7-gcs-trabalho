@@ -14,7 +14,7 @@ Histórico de Versões
 
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
-|_&lt;dd/mm/aaaa&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;autor&gt;_|
+|09/12/2014          |<1.0>        |Criação do Documento    |Iuri Farias    |
 |_&lt;dd/mm/aaaa&gt;_|_&lt;1.1&gt;_|_&lt;Outra versão&gt;_  |_&lt;autor&gt;_|
 
 
@@ -22,29 +22,27 @@ Histórico de Versões
 1. Introdução
 ==============
 
-_[A introdução do Plano de Gerenciamento de Configuração  oferece uma visão geral de todo o documento. 
-Ela inclui a finalidade, o escopo, as definições, os acrônimos, as abreviações, as referências e uma visão geral deste
-Plano de Gerenciamento de Configuração.]_
+O Plano de Gerenciamento de Configurações tem como objetivo principal controlar todas as mudanças realizadas ao longo do ciclo de vida do projeto, em todas as suas etapas.
 
 1.1 Finalidade
 ---------------
-_[Especifique a finalidade deste Plano de Gerenciamento de Configuração.]_
+Garantir confiabilidade, estabilidade e indentificar todas as alterações realizadas durante a execução do projeto.
 
 1.2 Escopo
 ----------
-_[Uma breve descrição do escopo deste Plano de Gerenciamento de Configuração; o modelo ao qual ele está associado e tudo o que é afetado ou influenciado por este documento.]_
+A cada versão deve-se ter a identificação das alterações realizadas.
 
 1.3 Definições, Acrônimos e Abreviações
 ---------------------------------------
-_[Esta subseção apresenta as definições de todos os termos, acrônimos e abreviações necessários para a correta interpretação do Plano de Gerenciamento de Configuração.  Essas informações podem ser fornecidas mediante referência ao Glossário do projeto.]_
+GC - Gerência de COnfiguração
 
 1.4 Referências
 ---------------
-_[Esta subseção apresenta uma lista completa de todos os documentos mencionados no Plano de Gerenciamento de Configuração. Identifique os documentos por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes a partir das quais as referências podem ser obtidas. Essas informações podem ser fornecidas por um anexo ou outro documento.]_
+Pro Git (Chacon S. and Straub B.) - Second Edition - Apress
 
 1.5 Visão Geral
 ---------------
-_[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Configuração e explica como o documento está organizado.]_
+O Plano de Gerenciamento de Configurações irá definir as responsabilidades do projeto bem como todas as nomenclaturas, estruturas, ambientes, processos e solicitações de mudanças inclusas.
 
 
 
@@ -53,18 +51,15 @@ _[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Con
 
 2.1 Organização, Responsabilidades e Interfaces
 ------------------------------------------------
-_[Descreva quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM.]_
+Gerente de Configuração: Iuri Farias - Estabelecer Políticas de GC; Escrever Plano de GC; Configurar ambiente de GC;
+Gerente de Baselines: José Oliveira - Criar baselines.
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
-_[Descreva o ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto._
-_Descreva as ferramentas e os procedimentos necessários utilizados para o controle de versão dos itens de configuração gerados no ciclo de vida do projeto ou produto._
-_As questões envolvidas na configuração do ambiente de CM incluem:_
-* _tamanho previsto dos dados do produto_
-* _distribuição da equipe do produto_
-* _localização física dos servidores e clientes]_
+Ferramentas: 
+Git - Controle de versão
+SQL SERVER - Sistema Gerenciador de Banco de Dados
  
-
 
 3. O Programa de Gerenciamento de Configuração
 ==============================================
@@ -73,36 +68,47 @@ _As questões envolvidas na configuração do ambiente de CM incluem:_
 ---------------------------------
 ### 3.1.1 Métodos de Identificação
 ----------------------------------
-_[Descreva como os artefatos do projeto ou produto devem ser nomeados, marcados e numerados. O esquema de identificação deve abranger o hardware, o software do sistema, os produtos de terceiros (COTS) e todos os artefatos de desenvolvimento de aplicativos listados na estrutura de diretórios do produto; por exemplo, planos, modelos, componentes, software de teste, resultados e dados, executáveis e assim por diante.]_
+Nomenclatura de criação de branches: Branch<NomeResponsável> ex: BranchJose, BranchMaria.
+Nomenclatura de versionamento: ver_numVersão_DiaMesAno ex: ver_1.0_09122014
 
 ### 3.1.2 Itens de Configuração
-_[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou subsistema, responsável ou momento em que deverão ser incluídos em baselines._
-* _“Inclusão em Baseline” em branco significa que o grupo de artefatos não participará de baseline. Pode ser expresso como uma data ou identificador de uma baseline, fase ou ponto de controle_
-* _“Responsável”: indicar nominalmente, sempre que possível]_
+
 
 | Item (ou Tipo de Item)                 | Responsável na equipe	     | Inclusão em Baseline |
-|----------------------------------------|-----------------------------|----------------------|
-|_&lt;grupo de itens de configuração&gt;_|_&lt;nome do responsável&gt;_|_&lt;momento a partir do qual o conjunto de artefatos será incluído em baseline&gt;_|
+|----------------------------------------|----------------------------|----------------------|
+|Criação dos Casos de Uso                |José Oliveira               |Quando uma versão de Caso de Uso for criada ou alterada|
+| Criação dos Casos de Teste             |Iuri Farias                 |Quando uma versão de caso de teste for criada ou alterada|
+|Cronograma do Projeto                   |Iuri Farias                 |Quando houver alteração na data de entrega do projeto| 
 
 
 ### 3.1.3 Baselines do Projeto
 
-_[As baselines funcionam como um padrão oficial no qual os trabalhos subseqüentes são baseados. Somente mudanças autorizadas podem ser efetuadas nas baselines._
-_Descreva em que pontos do ciclo de vida do projeto ou produto as baselines devem ser estabelecidas. As baselines mais comuns devem ser definidas ao final de cada uma das fases de Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior._
-_Descreva quem autoriza uma baseline e o que ela contém.]_
+Ciclo de vida do projeto deverá ser deifnido de acordo com o cronograma.
+As baselines devem ser estabelecidas a cada ciclo de iteração em cada fase: Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior definidas por José Oliveira.
 
 ### 3.1.4 Estrutura do Repositório de Versões
-_[Descreva a organização de diretórios do seu repositório e que itens/arquivos devem ser armazenados em cada diretório.]_
+O projeto será dividido nas seguintes fases:
+1- Criação
+2- Levantamento de Requisitos
+3- Desenvolvimento
+4- Testes
+5- Homologação
+6- Implatação
+7- Encerramento
 
 3.2 Controle de Configuração e Mudança
 --------------------------------------
 
 ### 3.2.1 Processamento e Aprovação de Solicitações de Mudança
-_[Descreva o processo pelo qual os problemas e as mudanças são submetidos, revisados e dispostos. Inclua como funciona a transição de estados de uma solicitação de mudança]_
+
+O backup do repositório ser mantido e atualizado na view de desenvolvimeto. Os artefatos alterados durante a semana de trabalho serão salvos na view de integração de acordo com o fluxo de trabalho e ordens de serviços. Apenas o Gerente de configuração poderá subir os artefatos para a view de integração (produção).
 
 ### 3.2.2 Comitê de Controle de Mudança (CCB)
-_[Descreva a participação e os procedimentos para processar solicitações e aprovações de mudança a serem seguidos pelo CCB. Informe quem são os membros do CCB e suas responsabilidades.]_
 
+O comitê de Controle de Mudanças (CCM) será formado pelo Gerente de Configuração e  Gerente de Projetos.
+
+Gerente de Configuração  –  José Oliveira
+Gerente de Projeto – Iuri Farias
 
 
 4. Padrões e Procedimentos
