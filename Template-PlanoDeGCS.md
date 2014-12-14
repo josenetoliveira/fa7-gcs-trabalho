@@ -129,4 +129,5 @@ Descrição resumida do que foi alterado/implementado
 
 6. Auditorias de Configuração
 =============================
-_[Descreva o cronograma das auditorias de configuração e o que será verificado. Informe também como serão reportados os problemas encontrados e onde sera feito o acompanhamento dos itens corretivos.]_
+- As auditorias serão feitas após as baselines. 
+- Caso haja não conformidade, será criada uma "issue" na ferramenta Bugzilla.
